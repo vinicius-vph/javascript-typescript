@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript</title>
+</head>
+<body>
+    <script>
+        // para criar uma função escrevemos a palavra chave funtion 
+        // seguido do nome e dentros de parenteses definimos os parametros que a gente quer receber
+        // por ultimo abrimos e fechamos chaves onde havera o corpo da função e o que sera executado
+        function soma(numero1, numero2) {
+            var resultado = numero1 + numero2;
+            return resultado;
+        }
+
+        //criada uma nova variavel resultado pois a primeira é uma de escoo local, e o console.log
+        //nao conseguiria ler ela, somente uma de escopo global, nesse caso
+        var resultado = soma(1, 2);
+        console.log(resultado);
+
+    </script>
+</body>
+</html>

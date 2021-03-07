@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Javascript</title>
+    <style>
+      #btn {
+        padding: 5px;
+        margin: 0px auto 10px auto;
+        height: 50px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--A partir do seguinte vetor:
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+    l Diego
+    l Gabriel
+    l Lucas-->
+
+    <div id="app">
+      <ul id="list"></ul>
+      <button id="btn" onclick="add()">Adicionar lista</button>
+    </div>
+
+    <script>
+      function add() {
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var docLi = document.querySelector("#app #list");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "one");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "two");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "three");
+
+        var items = document.querySelector("#app #list #one");
+        items.append(nomes[0]);
+        var items = document.querySelector("#app #list #two");
+        items.append(nomes[1]);
+        var items = document.querySelector("#app #list #three");
+        items.append(nomes[2]);
+      }
+    </script>
+  </body>
+</html>

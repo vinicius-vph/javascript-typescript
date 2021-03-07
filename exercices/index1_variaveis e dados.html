@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript</title>
+</head>
+<body>
+    <script>
+        // o js possui tipagem dinâmica, ou seja não é preciso definir o tipo de valor
+
+        //string
+        var nome = "Vinicius";
+        //integer
+        var idade = 31;
+        //float
+        var peso = 79.5;
+        //boolean
+        var humano = true;
+        //vetores
+        var alunos = ['Vinicius','Philar','Pandora','Valentina'];
+        //objetos , ou seja variaveis que guardam mais de um valor sobre um item 
+        var aluno = {
+            nome:'Vinicius',
+            idade: 31,
+            peso: 79.5,
+            humano: true
+        };
+        // uma funçãoo global js , que permite imprimir a saida do codigo acima
+        //aqui ela mostra a variavel solicitada
+        console.log(peso);
+        //aqui ela busca dentro do vetor ou array na posição apontada, o item
+        console.log(alunos[2]);
+        //no objeto vc aponta a variavel e a propriedade que se quer mostrar
+        console.log(aluno.idade);
+
+    </script>
+</body>
+</html>

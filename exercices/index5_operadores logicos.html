@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript</title>
+</head>
+<body>
+    <script>
+        // operadores logicos and, or , not
+        // para o and usamos &&  para o or || para not !
+        var sexo = 'M', idade = 10;
+        if (sexo === 'M' || idade >= 18) {
+            console.log('OK');
+        }
+
+        //usando not
+        if (sexo !== 'F') {
+           console.log('Nice');
+        }
+
+        //podemos armazenar resultado de condições em variaveis
+        if (sexo === 'F') {
+            var masculino = true;
+        }else {
+            var masculino = false;
+        }
+
+        // ou dessa forma
+        // startando a variavel, e dentro da condição so chamando ela
+        var masculino;
+        if (sexo === 'F') {
+            masculino = true;
+        }else {
+            masculino = false;
+        }
+        console.log(masculino);
+
+        //podemos ainda reduzir o codigo ainda mais 
+        var masculino = sexo === 'M';
+        console.log(masculino);
+
+    </script>
+</body>
+</html>

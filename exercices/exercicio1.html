@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!--manipulando a dom-->
+
+    <div id="app">
+        <!--Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.-->
+            <button id="btn" onclick="adiciona()">Adicionar campo</button>
+
+
+    </div>
+<script>
+    function adiciona() {
+        var block = document.createElement('div');
+        block.setAttribute('class', 'a');
+        block.style.width = '100px';
+        block.style.height = '100px';
+        block.style.backgroundColor = 'red';
+
+        var blockElement = document.querySelector('#app')
+        blockElement.appendChild(block);
+
+
+    }
+
+
+</script>
+</body>
+</html>

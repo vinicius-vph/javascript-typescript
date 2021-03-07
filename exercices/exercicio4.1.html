@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Javascript</title>
+    <style>
+      #btn {
+        padding: 5px;
+        margin: 0px auto 10px auto;
+        height: 50px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <ul id="list"></ul>
+      <button id="btn" onclick="addList()">Adicionar lista</button>
+
+      <input type="text" name="nome" />
+      <button onClick="adicionar()" id="btn2">Adicionar</button>
+    </div>
+
+    <script>
+      function addList() {
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var docLi = document.querySelector("#app #list");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "one");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "two");
+
+        var lists = document.createElement("li");
+        docLi.appendChild(lists);
+        lists.setAttribute("id", "three");
+
+        var items = document.querySelector("#app #list #one");
+        items.append(nomes[0]);
+        var items = document.querySelector("#app #list #two");
+        items.append(nomes[1]);
+        var items = document.querySelector("#app #list #three");
+        items.append(nomes[2]);
+      }
+
+      function adicionar() {
+        var inputElement = document.querySelector("#app input");
+        var newContent = inputElement.value;
+        var docList = document.querySelector("#app #list");
+        var newLi = document.createElement("li");
+        docList.appendChild(newLi);
+        newLi.append(newContent);
+        inputElement.value = "";
+      }
+    </script>
+    <!--Seguindo o resultado do exercício anterior adicione um input em tela e um botão 
+        como a seguir:
+<input type="text" name="nome">
+<button onClick="adicionar()">Adicionar</button>
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista
+de nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.-->
+  </body>
+</html>
